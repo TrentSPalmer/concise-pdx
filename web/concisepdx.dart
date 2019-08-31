@@ -5,6 +5,7 @@ import 'vistas.dart';
 import 'faqs.dart';
 import 'hikes.dart';
 import 'attractions.dart';
+import 'feedback.dart';
 import 'card_templates.dart';
 
 void main() => runApp(MainApp());
@@ -73,7 +74,12 @@ class _ConcisePDXState extends State<ConcisePDX> {
                 },
                 child: cardOne('FAQ\'s'),
               ),
-              cardOne('Feedback and Source'),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => FeedBack()));
+                },
+                child: cardOne('Feedback and Source'),
+              ),
             ],
           ),
         ),
