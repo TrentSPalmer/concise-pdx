@@ -13,17 +13,9 @@ class _FeedBackState extends State<FeedBack> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('trimet'),
+        title: Text('feedback'),
         centerTitle: true,
         backgroundColor: navy,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
-        ],
       ),
       backgroundColor: peacockBlue,
       body: SingleChildScrollView(

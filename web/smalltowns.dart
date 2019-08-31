@@ -3,6 +3,7 @@ import 'defaults.dart';
 import 'card_templates.dart';
 import 'eastwillamettevalley.dart';
 import 'westwillamettevalley.dart';
+import 'eastcounty.dart';
 
 class SmallTowns extends StatefulWidget {
   @override
@@ -43,6 +44,12 @@ class _SmallTownsState extends State<SmallTowns> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => WestWillametteValley()));
                 },
                 child: cardOne('West Willamette Valley'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => EastCounty()));
+                },
+                child: cardOne('East County'),
               ),
             ],
           ),
