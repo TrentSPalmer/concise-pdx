@@ -46,7 +46,7 @@ Card mtTabor() {
     'https://www.oregonhikers.org/field_guide/Mount_Tabor_Hike',
     'mt-tabor-hike',
     'Hike or Walk on Mt Tabor in South East PDX.',
-    'https://www.google.com/maps/@45.50894,-122.5996687,17z',
+    'https://www.google.com/maps/@45.50894,-122.5996687,16z',
     'lincoln-street-trailhead'
   );
 }
