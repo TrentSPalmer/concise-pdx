@@ -34,7 +34,7 @@ class _StJohnsStreetsState extends State<StJohnsStreets> {
             'https://www.google.com/maps/@45.5883,-122.75799,17z',
             'cathedral-park'
           ),
-          cardTwo('Lombard-Ivanhoe','https://example.com','lombard-ivanhoe'),
+          cardTwo('N Lombard, Richmond to St Louis','https://www.google.com/maps/@45.5902882,-122.7536259,17z','lombard-ivanhoe'),
         ],
       ),
     );
