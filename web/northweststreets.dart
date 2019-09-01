@@ -46,9 +46,8 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
                 'https://www.google.com/maps/@45.521389,-122.691667,17z',
                 'providence-park-map'
               ),
-              cardTwo('Vaughn','https://example.com','vaughn'),
-              cardTwo('NW 23rd','https://example.com','23rd'),
-              cardTwo('NW 21st','https://example.com','21st'),
+              cardTwo('NW 23rd, Burnside to Thurman','https://www.google.com/maps/@45.5295226,-122.6984339,16z','23rd'),
+              cardTwo('NW 21st, Burnside to Raleigh','https://www.google.com/maps/@45.5291143,-122.6945136,16z','21st'),
             ],
           ),
         ),
