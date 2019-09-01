@@ -31,8 +31,6 @@ class _EastWillametteValleyState extends State<EastWillametteValley> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              cardTwo('Water and First in Downtown Silverton','https://www.google.com/maps/@45.0052266,-122.7825282,17z','water-first'),
-              cardTwo('Downtown Mt Angel is famous for German Food','https://www.google.com/maps/@45.0696714,-122.7991836,17z','downtown-mtangel'),
               silverFalls(),
               convenienceCardOne(
                 'https://en.wikipedia.org/wiki/Oregon_Garden',
@@ -41,6 +39,8 @@ class _EastWillametteValleyState extends State<EastWillametteValley> {
                 'https://www.google.com/maps/@44.9927687,-122.7935883,16z',
                 'oregon-garden-map'
               ),
+              cardTwo('Water and First in Downtown Silverton','https://www.google.com/maps/@45.0052266,-122.7825282,17z','water-first'),
+              cardTwo('Downtown Mt Angel is famous for German Food','https://www.google.com/maps/@45.0696714,-122.7991836,17z','downtown-mtangel'),
             ],
           ),
         ),

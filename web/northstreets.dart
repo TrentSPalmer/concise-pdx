@@ -31,11 +31,11 @@ class _NorthStreetsState extends State<NorthStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
+              modaCenter(),
+              waudBluff(),
               cardTwo('Vancouver-Williams','https://example.com','vancouver-williams'),
               cardTwo('Mississippi-Albina','https://example.com','mississippi-albina'),
               cardTwo('North Lombard','https://example.com','north lombard'),
-              modaCenter(),
-              waudBluff(),
             ],
           ),
         ),

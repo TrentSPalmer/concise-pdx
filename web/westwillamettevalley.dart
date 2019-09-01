@@ -30,8 +30,6 @@ class _WestWillametteValleyState extends State<WestWillametteValley> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              cardTwo('Newberg-Dundee is a Wine-Tasting Destination','https://www.google.com/maps/@45.3007635,-122.9754037,17z','downtown-newberg'),
-              cardTwo('3rd St in Downtown McMinnville','https://www.google.com/maps/@45.2099371,-123.1927857,16z','downtown-mcminnville'),
               convenienceCardOne(
                 'https://en.wikipedia.org/wiki/Evergreen_Aviation_%26_Space_Museum',
                 'spruce-goose',
@@ -39,6 +37,8 @@ class _WestWillametteValleyState extends State<WestWillametteValley> {
                 'https://www.google.com/maps/@45.2031571,-123.1454622,17z',
                 'spruce-goose-map'
               ),
+              cardTwo('Newberg-Dundee is a Wine-Tasting Destination','https://www.google.com/maps/@45.3007635,-122.9754037,17z','downtown-newberg'),
+              cardTwo('3rd St in Downtown McMinnville','https://www.google.com/maps/@45.2099371,-123.1927857,16z','downtown-mcminnville'),
             ],
           ),
         ),

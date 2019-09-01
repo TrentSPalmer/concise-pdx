@@ -30,9 +30,6 @@ class _SellwoodStreetsState extends State<SellwoodStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              cardTwo('SE Woodstock from 42nd to 50th','https://www.google.com/maps/@45.4791687,-122.6158324,18z','woodstock'),
-              cardTwo('SE Milwaukie, Tolman to Knapp','https://www.google.com/maps/@45.4741145,-122.6483169,17z','milwaukie'),
-              cardTwo('SE 13th from Umatilla to Malden','https://www.google.com/maps/@45.4662368,-122.6532889,17z','13th'),
               convenienceCardOne(
                 'https://www.portlandoregon.gov/parks/finder/index.cfm?&action=ViewPark&propertyid=27',
                 'crystal-springs-rhododendron-garden',
@@ -47,6 +44,9 @@ class _SellwoodStreetsState extends State<SellwoodStreets> {
                 'https://www.google.com/maps/@45.4762318,-122.6616333,16z',
                 'springwater-on-the-willamette-trail-map'
               ),
+              cardTwo('SE Woodstock from 42nd to 50th','https://www.google.com/maps/@45.4791687,-122.6158324,18z','woodstock'),
+              cardTwo('SE Milwaukie, Tolman to Knapp','https://www.google.com/maps/@45.4741145,-122.6483169,17z','milwaukie'),
+              cardTwo('SE 13th from Umatilla to Malden','https://www.google.com/maps/@45.4662368,-122.6532889,17z','13th'),
             ],
           ),
         ),
