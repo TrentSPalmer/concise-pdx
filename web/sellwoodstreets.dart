@@ -31,6 +31,10 @@ class _SellwoodStreetsState extends State<SellwoodStreets> {
           child: Column(
             children: <Widget>[
               cardTwo('Woodstock','https://example.com','woodstock'),
+              cardTwo('Bybee','https://example.com','bybee'),
+              cardTwo('Milwaukie','https://example.com','milwaukie'),
+              cardTwo('SE 13th','https://example.com','13th'),
+              cardTwo('Tacoma','https://example.com','tacoma'),
               convenienceCardOne(
                 'https://www.portlandoregon.gov/parks/finder/index.cfm?&action=ViewPark&propertyid=27',
                 'crystal-springs-rhododendron-garden',
@@ -38,8 +42,6 @@ class _SellwoodStreetsState extends State<SellwoodStreets> {
                 'https://www.google.com/maps/@45.479722,-122.635556,17z',
                 'crystal-springs-rhododendron-garden-map'
               ),
-              cardTwo('Bybee','https://example.com','bybee'),
-              cardTwo('Milwaukie','https://example.com','milwaukie'),
               convenienceCardOne(
                 'https://www.alltrails.com/trail/us/oregon/springwater-on-the-wilamette-north-woodland-and-bluff-trail-loop',
                 'springwater-on-the-willamette-trail',
@@ -47,8 +49,6 @@ class _SellwoodStreetsState extends State<SellwoodStreets> {
                 'https://www.google.com/maps/@45.4762318,-122.6616333,16z',
                 'springwater-on-the-willamette-trail-map'
               ),
-              cardTwo('SE 13th','https://example.com','13th'),
-              cardTwo('Tacoma','https://example.com','tacoma'),
             ],
           ),
         ),

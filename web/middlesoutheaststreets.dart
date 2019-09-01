@@ -31,13 +31,13 @@ class _MiddleSouthEastStreetsState extends State<MiddleSouthEastStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              mtTabor(),
               cardTwo('Glisan','https://example.com','glisan'),
               cardTwo('Burnside','https://example.com','burnside'),
               cardTwo('Stark','https://example.com','stark'),
               cardTwo('Morrison-Belmont','https://example.com','morrison-belmont'),
               cardTwo('Hawthorne','https://example.com','hawthorne'),
               cardTwo('SE Division between 11th and 60th','https://www.google.com/maps/@45.5048718,-122.6326215,18z','division'),
+              mtTabor(),
             ],
           ),
         ),

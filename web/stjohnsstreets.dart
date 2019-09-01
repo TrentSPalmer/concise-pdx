@@ -27,6 +27,7 @@ class _StJohnsStreetsState extends State<StJohnsStreets> {
       backgroundColor: peacockBlue,
       body: Column(
         children: <Widget>[
+          cardTwo('Lombard-Ivanhoe','https://example.com','lombard-ivanhoe'),
           convenienceCardOne(
             'https://en.wikipedia.org/wiki/Cathedral_Park_(Portland,_Oregon)',
             'Cathedral Park',
@@ -34,7 +35,6 @@ class _StJohnsStreetsState extends State<StJohnsStreets> {
             'https://www.google.com/maps/@45.5883,-122.75799,17z',
             'cathedral-park'
           ),
-          cardTwo('Lombard-Ivanhoe','https://example.com','lombard-ivanhoe'),
         ],
       ),
     );

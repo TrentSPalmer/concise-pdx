@@ -32,10 +32,10 @@ class _NorthStreetsState extends State<NorthStreets> {
           child: Column(
             children: <Widget>[
               cardTwo('Vancouver-Williams','https://example.com','vancouver-williams'),
-              modaCenter(),
               cardTwo('Mississippi-Albina','https://example.com','mississippi-albina'),
-              waudBluff(),
               cardTwo('North Lombard','https://example.com','north lombard'),
+              modaCenter(),
+              waudBluff(),
             ],
           ),
         ),

@@ -31,8 +31,10 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              macleayParkPittockMansion(),
               cardTwo('Vaughn','https://example.com','vaughn'),
+              cardTwo('NW 23rd','https://example.com','23rd'),
+              cardTwo('NW 21st','https://example.com','21st'),
+              macleayParkPittockMansion(),
               convenienceCardOne(
                 'https://en.wikipedia.org/wiki/Washington_Park_(Portland,_Oregon)',
                 'washington-park',
@@ -40,7 +42,6 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
                 'https://www.google.com/maps/@45.515833,-122.7075,15z',
                 'washington-park-map'
               ),
-              cardTwo('NW 23rd','https://example.com','23rd'),
               convenienceCardOne(
                 'https://en.wikipedia.org/wiki/Providence_Park',
                 'providence-park',
@@ -48,7 +49,6 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
                 'https://www.google.com/maps/@45.521389,-122.691667,17z',
                 'providence-park-map'
               ),
-              cardTwo('NW 21st','https://example.com','21st'),
             ],
           ),
         ),

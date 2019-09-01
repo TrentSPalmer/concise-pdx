@@ -31,14 +31,14 @@ class _NorthEastStreetsState extends State<NorthEastStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              rockyButteDrive(),
-              rockyButteHike(),
               cardTwo('Killingsworth','https://example.com','killingsworth'),
               cardTwo('Alberta','https://example.com','alberta'),
               cardTwo('Freemont','https://example.com','freemont'),
               cardTwo('Sandy','https://example.com','sandy'),
               cardTwo('Weidler-Broadway','https://example.com','weidler-broadway'),
               modaCenter(),
+              rockyButteDrive(),
+              rockyButteHike(),
             ],
           ),
         ),
