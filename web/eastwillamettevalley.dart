@@ -1,7 +1,8 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'card_templates.dart';
-import 'prebuildcards.dart';
+import 'silverton.dart';
+import 'oregoncity.dart';
 
 class EastWillametteValley extends StatefulWidget {
   @override
@@ -31,16 +32,19 @@ class _EastWillametteValleyState extends State<EastWillametteValley> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              silverFalls(),
-              convenienceCardOne(
-                'https://en.wikipedia.org/wiki/Oregon_Garden',
-                'oregon-garden',
-                'Silverton is convenient for a visit to Oregon Garden',
-                'https://www.google.com/maps/@44.9927687,-122.7935883,16z',
-                'oregon-garden-map'
-              ),
-              cardTwo('Water and First in Downtown Silverton','https://www.google.com/maps/@45.0052266,-122.7825282,17z','water-first'),
               cardTwo('Downtown Mt Angel is famous for German Food','https://www.google.com/maps/@45.0696714,-122.7991836,17z','downtown-mtangel'),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => Silverton()));
+                },
+                child: cardOne('Silverton (and sights)'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => OregonCity()));
+                },
+                child: cardOne('Oregon City (and sights)'),
+              ),
             ],
           ),
         ),

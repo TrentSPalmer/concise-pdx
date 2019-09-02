@@ -270,3 +270,23 @@ Card oregonCoast() {
     'oregon-coast-map'
   );
 }
+
+Card mcgloughlinPromenade() {
+  return convenienceCardOne(
+    'https://www.oregonhikers.org/field_guide/McLoughlin_Promenade_Hike',
+    'mcgloughlin-promenade',
+    'Hike the McGloughlin Promenade above Downtown Oregon City and Willamette Falls',
+    'https://www.google.com/maps/@45.35709,-122.60811,19z',
+    'elevator-trailhead'
+  );
+}
+
+Card willametteFallsViewPoint() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Willamette_Falls',
+    'willamette-falls',
+    'See Willamette Falls from I-205 NB',
+    'https://goo.gl/maps/kMaYQafxdtHbVqFr5',
+    'willamette-falls-map'
+  );
+}

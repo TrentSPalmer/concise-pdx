@@ -33,6 +33,7 @@ class _VistaHikesState extends State<VistaHikes> {
               waudBluff(),
               rockyButteHike(),
               mtTabor(),
+              mcgloughlinPromenade(),
               olallieButte(),
               larchMountain(),
               angelsRest(),

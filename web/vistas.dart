@@ -8,6 +8,7 @@ import 'vistasnorthpdx.dart';
 import 'vistasnortheastpdx.dart';
 import 'vistassoutheastpdx.dart';
 import 'greshamvistas.dart';
+import 'oregoncityvistas.dart';
 import 'remotevistas.dart';
 import 'gorgevistas.dart';
 
@@ -86,6 +87,12 @@ class _VistasState extends State<Vistas> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => GreshamVistas()));
                 },
                 child: cardOne('Gresham'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => OregonCityVistas()));
+                },
+                child: cardOne('Oregon City'),
               ),
             ],
           ),

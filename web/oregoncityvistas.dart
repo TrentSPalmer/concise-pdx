@@ -1,18 +1,19 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
 
-class VistaDrives extends StatefulWidget {
+class OregonCityVistas extends StatefulWidget {
   @override
-  _VistaDrivesState createState() => _VistaDrivesState();
+  _OregonCityVistasState createState() => _OregonCityVistasState();
 }
 
-class _VistaDrivesState extends State<VistaDrives> {
+class _OregonCityVistasState extends State<OregonCityVistas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('driveable vistas'),
+        title: Text('oregon-city-vistas'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
@@ -30,12 +31,9 @@ class _VistaDrivesState extends State<VistaDrives> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              waudBluff(),
-              rockyButteDrive(),
-              hoganButte(),
+              mcgloughlinPromenade(),
               willametteFallsViewPoint(),
-              womensForum(),
-              crownPoint(),
+              cardTwo('See Willamette Falls from turnout on 99E','https://www.google.com/maps/@45.351922,-122.6141362,21z','main'),
             ],
           ),
         ),

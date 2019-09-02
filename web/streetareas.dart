@@ -7,6 +7,7 @@ import 'northstreets.dart';
 import 'stjohnsstreets.dart';
 import 'sellwoodstreets.dart';
 import 'smalltowns.dart';
+import 'lakeoswego.dart';
 import 'card_templates.dart';
 
 class StreetAreas extends StatefulWidget {
@@ -66,6 +67,12 @@ class _StreetAreasState extends State<StreetAreas> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => NorthWestStreets()));
                 },
                 child: cardOne('NorthWest'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => LakeOswegoStreets()));
+                },
+                child: cardOne('Lake Oswego'),
               ),
               InkWell(
                 onTap: () async {
