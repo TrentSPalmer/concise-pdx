@@ -290,3 +290,53 @@ Card willametteFallsViewPoint() {
     'willamette-falls-map'
   );
 }
+
+Card oregonZoo() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Oregon_Zoo',
+    'oregon-zoo',
+    'Visit Oregon Zoo in Washington Park',
+    'https://www.google.com/maps/@45.5098414,-122.7167163,18z',
+    'oregon-zoo-map'
+  );
+}
+
+Card roseGarden() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/International_Rose_Test_Garden',
+    'rose-garden',
+    'Visit International Rose Test Garden in Washington Park',
+    'https://www.google.com/maps/@45.5191,-122.7054,18z',
+    'rose-garden-map'
+  );
+}
+
+Card peninsulaPark() {
+  return convenienceCardOne(
+    'https://www.pdxmonthly.com/articles/2018/5/22/the-hidden-history-of-north-portland-s-flower-powered-peninsula-park',
+    'peninsula-park',
+    'Visit the Rose Garden in Peninsula Park',
+    'https://www.google.com/maps/@45.5680077,-122.6736269,17z',
+    'peninsula-park-map'
+  );
+}
+
+Card hoytArboretum() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Hoyt_Arboretum',
+    'hoyt-arboretum',
+    'Visit Hoyt Arboretum in Washington Park',
+    'https://www.google.com/maps/@45.51679,-122.716,17z',
+    'hoyt-arboretum-map'
+  );
+}
+
+Card pittockMansion() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Pittock_Mansion',
+    'pittock-mansion',
+    'Visit Pittock Mansion near Washington Park',
+    'https://www.google.com/maps/@45.525,-122.716389,17z',
+    'pittock-mansion-map'
+  );
+}

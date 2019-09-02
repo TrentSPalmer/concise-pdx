@@ -1,6 +1,8 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
+import 'washingtonpark.dart';
 
 class Attractions extends StatefulWidget {
   @override
@@ -29,6 +31,12 @@ class _AttractionsState extends State<Attractions> {
               mountHood(),
               mountSaintHelens(),
               oregonCoast(),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
+                },
+                child: cardOne('Visit the Zoo, Rose Garden, Hoyt Arboretum, Pittock Mansion, and Japanese Garden at WashingtonPark.'),
+              ),
             ],
           ),
         ),
