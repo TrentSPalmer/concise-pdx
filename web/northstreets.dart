@@ -33,6 +33,7 @@ class _NorthStreetsState extends State<NorthStreets> {
             children: <Widget>[
               modaCenter(),
               waudBluff(),
+              peninsulaPark(),
               cardTwo('N Williams, Cook to Skidmore','https://www.google.com/maps/@45.55075,-122.6666716,16z','williams'),
               cardTwo('N Mississippi, Fremont to Alberta','https://www.google.com/maps/@45.5526726,-122.6752348,16z','mississippi'),
               cardTwo('N Denver, Schofield to Interstate','https://www.google.com/maps/@45.5827784,-122.687082,18z','north lombard'),
