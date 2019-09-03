@@ -25,17 +25,22 @@ class _StJohnsStreetsState extends State<StJohnsStreets> {
         ],
       ),
       backgroundColor: peacockBlue,
-      body: Column(
-        children: <Widget>[
-          convenienceCardOne(
-            'https://en.wikipedia.org/wiki/Cathedral_Park_(Portland,_Oregon)',
-            'Cathedral Park',
-            'This area of town is convenient for a visit to Cathedral Park under the St John\'s Bridge',
-            'https://www.google.com/maps/@45.5883,-122.75799,17z',
-            'cathedral-park'
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.only(bottom: 6.0,),
+          child: Column(
+            children: <Widget>[
+              convenienceCardOne(
+                'https://en.wikipedia.org/wiki/Cathedral_Park_(Portland,_Oregon)',
+                'Cathedral Park',
+                'This area of town is convenient for a visit to Cathedral Park under the St John\'s Bridge',
+                'https://www.google.com/maps/@45.5883,-122.75799,17z',
+                'cathedral-park'
+              ),
+              cardTwo('N Lombard, Richmond to St Louis','https://www.google.com/maps/@45.5902882,-122.7536259,17z','lombard-ivanhoe'),
+            ],
           ),
-          cardTwo('N Lombard, Richmond to St Louis','https://www.google.com/maps/@45.5902882,-122.7536259,17z','lombard-ivanhoe'),
-        ],
+        ),
       ),
     );
   }

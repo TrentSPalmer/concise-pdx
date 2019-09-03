@@ -25,17 +25,22 @@ class _LakeOswegoStreetsState extends State<LakeOswegoStreets> {
         ],
       ),
       backgroundColor: peacockBlue,
-      body: Column(
-        children: <Widget>[
-          convenienceCardOne(
-            'https://en.wikipedia.org/wiki/Willamette_Shore_Trolley',
-            'willamette-trolley',
-            'This area of town is convenient for an excursion on the Willamette Shore Trolley',
-            'https://www.google.com/maps/@45.4180967,-122.6629502,20z',
-            'willamette-trolley-map'
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.only(bottom: 6.0,),
+          child: Column(
+            children: <Widget>[
+              convenienceCardOne(
+                'https://en.wikipedia.org/wiki/Willamette_Shore_Trolley',
+                'willamette-trolley',
+                'This area of town is convenient for an excursion on the Willamette Shore Trolley',
+                'https://www.google.com/maps/@45.4180967,-122.6629502,20z',
+                'willamette-trolley-map'
+              ),
+              cardTwo('Downtown Lake Oswego','https://www.google.com/maps/@45.4167125,-122.6660073,16z','lake-oswego'),
+            ],
           ),
-          cardTwo('Downtown Lake Oswego','https://www.google.com/maps/@45.4167125,-122.6660073,16z','lake-oswego'),
-        ],
+        ),
       ),
     );
   }
