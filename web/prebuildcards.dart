@@ -181,16 +181,6 @@ Card chineseGarden() {
   );
 }
 
-Card paradisePark() {
-  return convenienceCardOne(
-    'https://www.oregonhikers.org/field_guide/Paradise_Park_from_Timberline_Lodge_Hike',
-    'paradise-park',
-    'Hike to Paradise Park on Mt Hood, from Timberline Lodge in Summer.',
-    'https://www.google.com/maps/@45.3561013,-121.7472,17z',
-    'paradise-park-map'
-  );
-}
-
 Card eagleCreek() {
   return convenienceCardOne(
     'https://www.oregonhikers.org/field_guide/Eagle_Creek_to_Tunnel_Falls_Hike',
@@ -238,16 +228,6 @@ Card columbiaGorge() {
     'Hike, SightSee, Cruise, or WindSurf the Columbia River Gorge',
     'https://www.google.com/maps/@45.704722,-121.791667,11z',
     'columbia-river-gorge-map'
-  );
-}
-
-Card mountHood() {
-  return convenienceCardOne(
-    'https://en.wikipedia.org/wiki/Mount_Hood',
-    'mount-hood',
-    'Visit Mt Hood',
-    'https://www.google.com/maps/@45.373514,-121.695919,12z',
-    'mount-hood-map'
   );
 }
 
@@ -338,5 +318,75 @@ Card pittockMansion() {
     'Visit Pittock Mansion near Washington Park',
     'https://www.google.com/maps/@45.525,-122.716389,17z',
     'pittock-mansion-map'
+  );
+}
+
+Card timberlineLodge() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Timberline_Lodge',
+    'timberline-lodge',
+    'Tour, Dine, or Stay at Historic Timberline Lodge',
+    'https://www.google.com/maps/@45.331111,-121.71,18z',
+    'timberline-lodge-map'
+  );
+}
+
+Card paradisePark() {
+  return convenienceCardOne(
+    'https://www.oregonhikers.org/field_guide/Paradise_Park_from_Timberline_Lodge_Hike',
+    'paradise-park',
+    'Hike to Paradise Park on Mt Hood, from Timberline Lodge in Summer.',
+    'https://www.google.com/maps/@45.3561013,-121.7472,17z',
+    'paradise-park-map'
+  );
+}
+
+Card elkMeadows() {
+  return convenienceCardOne(
+    'https://www.oregonhikers.org/field_guide/Elk_Meadows_Hike',
+    'elk-meadows',
+    'Hike to Elk Meadows on Mt Hood.',
+    'https://www.google.com/maps/@45.34417,-121.61611,17z',
+    'elk-meadows-map'
+  );
+}
+
+Card cairnBasin() {
+  return convenienceCardOne(
+    'https://www.oregonhikers.org/field_guide/Cairn_Basin_from_Vista_Ridge_Hike',
+    'cairn-basin',
+    'Hike to Cairn Basin on Mt Hood.',
+    'https://www.google.com/maps/@45.40397,-121.72371,17z',
+    'cairn-basin-map'
+  );
+}
+
+Card timothyLake() {
+  return convenienceCardOne(
+    'https://www.portlandgeneral.com/corporate-responsibility/environmental-stewardship/water-quality-habitat-protection/parks-campgrounds/timothy-lake',
+    'timothy-lake',
+    'Camp at Timothy Lake on Mt Hood.',
+    'https://www.google.com/maps/@45.121022,-121.785654,14z',
+    'timothy-lake-map'
+  );
+}
+
+Card trilliumLake() {
+  return convenienceCardOne(
+    'https://www.fs.usda.gov/recarea/mthood/recarea/?recid=53634',
+    'trillium-lake',
+    'Camp at Trillium Lake on Mt Hood.',
+    'https://www.google.com/maps/@45.2714348,-121.7366999,16z',
+    'trillium-lake-map'
+  );
+}
+
+Card lostLake() {
+  return convenienceCardOne(
+    'https://www.fs.usda.gov/recarea/mthood/recarea/?recid=53228',
+    'lost-lake',
+    'Camp at Lost Lake on Mt Hood.',
+    'https://www.google.com/maps/@45.48889,-121.82194,15z',
+    'lost-lake-map'
   );
 }

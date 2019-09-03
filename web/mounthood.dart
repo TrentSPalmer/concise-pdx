@@ -1,18 +1,19 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
 
-class WashingtonPark extends StatefulWidget {
+class MountHood extends StatefulWidget {
   @override
-  _WashingtonParkState createState() => _WashingtonParkState();
+  _MountHoodState createState() => _MountHoodState();
 }
 
-class _WashingtonParkState extends State<WashingtonPark> {
+class _MountHoodState extends State<MountHood> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('washingtonpark'),
+        title: Text('MountHood'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
@@ -30,11 +31,15 @@ class _WashingtonParkState extends State<WashingtonPark> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              oregonZoo(),
-              japaneseGarden(),
-              roseGarden(),
-              hoytArboretum(),
-              pittockMansion(),
+              timberlineLodge(),
+              paradisePark(),
+              elkMeadows(),
+              cairnBasin(),
+              timothyLake(),
+              trilliumLake(),
+              lostLake(),
+              infoCard('More Hikes on Mt Hood','https://www.oregonhikers.org/field_guide/Mount_Hood_Hikes','a'),
+              infoCard('More Camping on Mt Hood','https://www.fs.usda.gov/activity/mthood/recreation/camping-cabins','b'),
             ],
           ),
         ),
