@@ -2,17 +2,17 @@ import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'card_templates.dart';
 
-class LakeOswegoStreets extends StatefulWidget {
+class SouthWestStreets extends StatefulWidget {
   @override
-  _LakeOswegoStreetsState createState() => _LakeOswegoStreetsState();
+  _SouthWestStreetsState createState() => _SouthWestStreetsState();
 }
 
-class _LakeOswegoStreetsState extends State<LakeOswegoStreets> {
+class _SouthWestStreetsState extends State<SouthWestStreets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('walkable lake-oswego streets\nwith bars-restaurants'),
+        title: Text('walkable sw streets\nwith bars-restaurants'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
@@ -33,11 +33,12 @@ class _LakeOswegoStreetsState extends State<LakeOswegoStreets> {
               convenienceCardOne(
                 'https://en.wikipedia.org/wiki/Willamette_Shore_Trolley',
                 'willamette-trolley',
-                'This area of town is convenient for an excursion on the Willamette Shore Trolley',
+                'Lake Oswego is convenient for an excursion on the Willamette Shore Trolley',
                 'https://www.google.com/maps/@45.4180967,-122.6629502,20z',
                 'willamette-trolley-map'
               ),
               cardTwo('Downtown Lake Oswego','https://www.google.com/maps/@45.4167125,-122.6660073,16z','lake-oswego'),
+              cardTwo('Capitol Highway in Multnomah Village from 31st to 38th','https://www.google.com/maps/@45.4685132,-122.7132439,18z','multnomah-village'),
             ],
           ),
         ),
