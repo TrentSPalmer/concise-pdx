@@ -1,7 +1,7 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'card_templates.dart';
-import 'prebuildcards.dart';
+import 'oregoncitysights.dart';
 
 class OregonCity extends StatefulWidget {
   @override
@@ -31,24 +31,13 @@ class _OregonCityState extends State<OregonCity> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              mcgloughlinPromenade(),
-              convenienceCardOne(
-                'https://www.nps.gov/fova/learn/historyculture/mcloughlin-house.htm',
-                'mcloughlin-house',
-                'History Buffs may want to visit the McGloughlin House',
-                'https://www.google.com/maps/@45.3571259,-122.6056864,19z',
-                'mcloughlin-house-map'
-              ),
-              convenienceCardOne(
-                'https://en.wikipedia.org/wiki/Willamette_Falls',
-                'willamette-falls',
-                'See Willamette Falls in Oregon City',
-                'https://www.google.com/maps/@45.35239,-122.61763,16z',
-                'willamette-falls-map'
-              ),
-              cardTwo('See Willamette Falls from turnout on I-205 NB','https://goo.gl/maps/kMaYQafxdtHbVqFr5','main'),
-              cardTwo('See Willamette Falls from turnout on 99E','https://www.google.com/maps/@45.351922,-122.6141362,21z','main'),
               cardTwo('Main St in Downtown Oregon City','https://www.google.com/maps/@45.3575898,-122.6072795,17z','main'),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => OregonCitySights()));
+                },
+                child: cardOne('As long as you\'re in Oregon City.'),
+              ),
             ],
           ),
         ),
