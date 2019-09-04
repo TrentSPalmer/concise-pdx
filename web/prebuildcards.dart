@@ -231,16 +231,6 @@ Card mountSaintHelens() {
   );
 }
 
-Card oregonCoast() {
-  return convenienceCardOne(
-    'https://en.wikipedia.org/wiki/Oregon_Coast',
-    'oregon-coast',
-    'Visit the Oregon Coast',
-    'https://www.google.com/maps/@44.000001,-124.100001,8z',
-    'oregon-coast-map'
-  );
-}
-
 Card mcgloughlinPromenade() {
   return convenienceCardOne(
     'https://www.oregonhikers.org/field_guide/McLoughlin_Promenade_Hike',
@@ -398,5 +388,45 @@ Card oregonGarden() {
     'Silverton is convenient for a visit to Oregon Garden',
     'https://www.google.com/maps/@44.9927687,-122.7935883,16z',
     'oregon-garden-map'
+  );
+}
+
+Card oregonCoastAquarium() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Oregon_Coast_Aquarium',
+    'oregon-aquarium',
+    'Visit the Oregon Coast Aquarium in Newport',
+    'https://www.google.com/maps/@44.61784,-124.04709,16z',
+    'oregon-aquarium-map'
+  );
+}
+
+Card seaLionCaves() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Sea_Lion_Caves',
+    'sea-lion-caves',
+    'Visit Sea Lion Caves in Florence',
+    'https://www.google.com/maps/@44.1224,-124.1276,16z',
+    'sea-lion-caves-map'
+  );
+}
+
+Card fortStevens() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Fort_Stevens_(Oregon)',
+    'fort-stevens',
+    'History Buffs and beach-goers will want to explore Fort Stevens near Warrenton',
+    'https://www.google.com/maps/@46.201944,-123.9625,16z',
+    'fort-stevens-map'
+  );
+}
+
+Card tillamookAirMuseum() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Tillamook_Air_Museum',
+    'tillamook-air-museum',
+    'Aviation Enthusiasts will want to visit the Tillamook Air Museum.',
+    'https://www.google.com/maps/@45.420391,-123.804835,16z',
+    'tillamook-air-museum-map'
   );
 }

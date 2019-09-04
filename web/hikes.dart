@@ -32,10 +32,6 @@ class _HikesState extends State<Hikes> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              cardThree(_mapTip),
-              cardThree(_prepared),
-              cardThree(_eagleCreekClosed),
-              cardThree(_whiteWaterTrailClosed),
               macleayParkPittockMansion(),
               angelsRest(),
               multnomahFalls(),
@@ -44,6 +40,10 @@ class _HikesState extends State<Hikes> {
               paradisePark(),
               silverFalls(),
               // jeffersonPark(),
+              cardThree(_mapTip),
+              cardThree(_prepared),
+              cardThree(_eagleCreekClosed),
+              cardThree(_whiteWaterTrailClosed),
             ],
           ),
         ),

@@ -5,6 +5,7 @@ import 'card_templates.dart';
 import 'washingtonpark.dart';
 import 'mounthood.dart';
 import 'columbiagorge.dart';
+import 'oregoncoast.dart';
 import 'eastwillamettevalleysights.dart';
 import 'westwillamettevalleysights.dart';
 
@@ -31,7 +32,6 @@ class _AttractionsState extends State<Attractions> {
           child: Column(
             children: <Widget>[
               mountSaintHelens(),
-              oregonCoast(),
               InkWell(
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => WestWillametteValleySights()));
@@ -49,6 +49,12 @@ class _AttractionsState extends State<Attractions> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => MountHood()));
                 },
                 child: cardOne('Camp, Hike, or Sight-See on Mt Hood.'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => OregonCoast()));
+                },
+                child: cardOne('Camp, Hike, or Sight-See on the Oregon Coast.'),
               ),
               InkWell(
                 onTap: () async {
