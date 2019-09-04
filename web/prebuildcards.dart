@@ -221,16 +221,6 @@ Card macleayParkPittockMansion() {
   );
 }
 
-Card columbiaGorge() {
-  return convenienceCardOne(
-    'https://en.wikipedia.org/wiki/Columbia_River_Gorge',
-    'columbia-river-gorge',
-    'Hike, SightSee, Cruise, or WindSurf the Columbia River Gorge',
-    'https://www.google.com/maps/@45.704722,-121.791667,11z',
-    'columbia-river-gorge-map'
-  );
-}
-
 Card mountSaintHelens() {
   return convenienceCardOne(
     'https://en.wikipedia.org/wiki/Mount_St._Helens',

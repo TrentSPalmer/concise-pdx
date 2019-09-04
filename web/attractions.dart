@@ -4,6 +4,7 @@ import 'prebuildcards.dart';
 import 'card_templates.dart';
 import 'washingtonpark.dart';
 import 'mounthood.dart';
+import 'columbiagorge.dart';
 
 class Attractions extends StatefulWidget {
   @override
@@ -27,8 +28,6 @@ class _AttractionsState extends State<Attractions> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              columbiaGorge(),
-              multnomahFalls(),
               mountSaintHelens(),
               oregonCoast(),
               InkWell(
@@ -36,6 +35,12 @@ class _AttractionsState extends State<Attractions> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => MountHood()));
                 },
                 child: cardOne('Camp, Hike, or Sight-See on Mt Hood.'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => ColumbiaGorge()));
+                },
+                child: cardOne('Camp, Hike, Cruise, or Sight-See in the Columbia River Gorge.'),
               ),
               InkWell(
                 onTap: () async {
