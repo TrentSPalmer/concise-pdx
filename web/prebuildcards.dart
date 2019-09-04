@@ -380,3 +380,23 @@ Card lostLake() {
     'lost-lake-map'
   );
 }
+
+Card spruceGoose() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Evergreen_Aviation_%26_Space_Museum',
+    'spruce-goose',
+    'McMinnville is convenient for the Spruce Goose and Evergreen Aviation Museum',
+    'https://www.google.com/maps/@45.2031571,-123.1454622,17z',
+    'spruce-goose-map'
+  );
+}
+
+Card oregonGarden() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Oregon_Garden',
+    'oregon-garden',
+    'Silverton is convenient for a visit to Oregon Garden',
+    'https://www.google.com/maps/@44.9927687,-122.7935883,16z',
+    'oregon-garden-map'
+  );
+}

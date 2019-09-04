@@ -1,19 +1,19 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
-import 'card_templates.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
 
-class Silverton extends StatefulWidget {
+class EastWillametteValleySights extends StatefulWidget {
   @override
-  _SilvertonState createState() => _SilvertonState();
+  _EastWillametteValleySightsState createState() => _EastWillametteValleySightsState();
 }
 
-class _SilvertonState extends State<Silverton> {
+class _EastWillametteValleySightsState extends State<EastWillametteValleySights> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('walkable small-towns\nwith bars-restaurants'),
+        title: Text('east willamette valley sights'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
@@ -33,7 +33,13 @@ class _SilvertonState extends State<Silverton> {
             children: <Widget>[
               silverFalls(),
               oregonGarden(),
-              cardTwo('Water and First in Downtown Silverton','https://www.google.com/maps/@45.0052266,-122.7825282,17z','water-first'),
+              convenienceCardOne(
+                'https://oregonstateparks.org/index.cfm?do=parkPage.dsp_parkPage&parkId=151',
+                'silver-falls',
+                'Camp at Silver Falls State Park Oregon',
+                'https://www.google.com/maps/@44.87752,-122.65513,15z',
+                'silver-falls-map'
+              ),
             ],
           ),
         ),

@@ -5,6 +5,8 @@ import 'card_templates.dart';
 import 'washingtonpark.dart';
 import 'mounthood.dart';
 import 'columbiagorge.dart';
+import 'eastwillamettevalleysights.dart';
+import 'westwillamettevalleysights.dart';
 
 class Attractions extends StatefulWidget {
   @override
@@ -30,6 +32,18 @@ class _AttractionsState extends State<Attractions> {
             children: <Widget>[
               mountSaintHelens(),
               oregonCoast(),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WestWillametteValleySights()));
+                },
+                child: cardOne('Sight-See in the West Willamette Valley.'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => EastWillametteValleySights()));
+                },
+                child: cardOne('Sight-See in the East Willamette Valley.'),
+              ),
               InkWell(
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => MountHood()));
