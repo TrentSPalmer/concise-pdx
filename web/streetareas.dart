@@ -72,7 +72,7 @@ class _StreetAreasState extends State<StreetAreas> {
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => SouthWestStreets()));
                 },
-                child: cardOne('South West'),
+                child: cardOne('SouthWest'),
               ),
               InkWell(
                 onTap: () async {
