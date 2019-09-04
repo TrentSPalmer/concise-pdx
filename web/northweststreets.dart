@@ -1,8 +1,7 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'card_templates.dart';
-import 'prebuildcards.dart';
-import 'washingtonpark.dart';
+import 'northweststreetssights.dart';
 
 class NorthWestStreets extends StatefulWidget {
   @override
@@ -32,21 +31,13 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              macleayParkPittockMansion(),
-              convenienceCardOne(
-                'https://en.wikipedia.org/wiki/Providence_Park',
-                'providence-park',
-                'This area of town is convenient for a football, baseball, or soccer game at Providence park',
-                'https://www.google.com/maps/@45.521389,-122.691667,17z',
-                'providence-park-map'
-              ),
               cardTwo('NW 23rd, Burnside to Thurman','https://www.google.com/maps/@45.5295226,-122.6984339,16z','23rd'),
               cardTwo('NW 21st, Burnside to Raleigh','https://www.google.com/maps/@45.5291143,-122.6945136,16z','21st'),
               InkWell(
                 onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => NorthWestStreetsSights()));
                 },
-                child: cardOne('Visit the Zoo, Rose Garden, Hoyt Arboretum, Pittock Mansion, and Japanese Garden at WashingtonPark.'),
+                child: cardOne('As long as you\'re in NorthWest Portland.'),
               ),
             ],
           ),
