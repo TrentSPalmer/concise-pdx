@@ -31,8 +31,8 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              cardTwo('NW 23rd, Burnside to Thurman','https://www.google.com/maps/@45.5295226,-122.6984339,16z','23rd'),
-              cardTwo('NW 21st, Burnside to Raleigh','https://www.google.com/maps/@45.5291143,-122.6945136,16z','21st'),
+              cardTwo('NW 23rd from Burnside to Thurman','https://www.google.com/maps/@45.5295226,-122.6984339,16z','23rd'),
+              cardTwo('NW 21st from Burnside to Raleigh','https://www.google.com/maps/@45.5291143,-122.6945136,16z','21st'),
               InkWell(
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => NorthWestStreetsSights()));
