@@ -61,11 +61,26 @@ Card cardThree(String allText) {
       color: ivory,
       child: Padding(
         padding: EdgeInsets.all(8.0),
-        child: Text(
-          allText,
-          style: TextStyle(
-            fontSize: 20.0,
-          ),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: Card(),
+            ),
+            Expanded(
+              flex: 8,
+              child: Text(
+                allText,
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Card(),
+            ),
+          ],
         ),
       ),
     ),
@@ -89,6 +104,11 @@ Card cardOne(String leftText) {
         child: Row(
           children: <Widget>[
             Expanded(
+              flex: 1,
+              child: Card(),
+            ),
+            Expanded(
+              flex: 7,
               child: Text(
                 leftText,
                 style: TextStyle(
@@ -96,7 +116,8 @@ Card cardOne(String leftText) {
                 ),
               ),
             ),
-            Container(
+            Expanded(
+              flex: 2,
               child: Icon(
                 Icons.arrow_right,
                 size: 50.0,
@@ -127,7 +148,11 @@ Card cardTwo(String leftText,String mapUrl,String mapUrlName) {
         child: Row(
           children: <Widget>[
             Expanded(
-              flex: 8,
+              flex: 1,
+              child: Card(),
+            ),
+            Expanded(
+              flex: 7,
               child: Text(
                 leftText,
                 style: TextStyle(
@@ -172,7 +197,7 @@ Card convenienceCardOne(String infoUrl,String infoUrlName,String middleText,Stri
         child: Row(
           children: <Widget>[
             Expanded(
-              flex: 2,
+              flex: 3,
               child: InkWell(
                 child: Icon(
                   Icons.info,
@@ -185,7 +210,7 @@ Card convenienceCardOne(String infoUrl,String infoUrlName,String middleText,Stri
               ),
             ),
             Expanded(
-              flex: 6,
+              flex: 5,
               child: Text(
                 middleText,
                 textAlign: TextAlign.center,
