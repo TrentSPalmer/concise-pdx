@@ -19,7 +19,11 @@ Card infoCard(String leftText,String infoUrl,String infoUrlName) {
         child: Row(
           children: <Widget>[
             Expanded(
-              flex: 8,
+              flex: 1,
+              child: Card(),
+            ),
+            Expanded(
+              flex: 7,
               child: Text(
                 leftText,
                 style: TextStyle(

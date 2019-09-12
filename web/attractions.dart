@@ -1,11 +1,11 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
-import 'prebuildcards.dart';
 import 'card_templates.dart';
 import 'washingtonpark.dart';
 import 'mounthood.dart';
 import 'columbiagorge.dart';
 import 'oregoncoast.dart';
+import 'washingtonstate.dart';
 import 'eastwillamettevalleysights.dart';
 import 'westwillamettevalleysights.dart';
 
@@ -31,7 +31,6 @@ class _AttractionsState extends State<Attractions> {
           padding: EdgeInsets.only(bottom: 6.0,),
           child: Column(
             children: <Widget>[
-              mountSaintHelens(),
               InkWell(
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => WestWillametteValleySights()));
@@ -67,6 +66,12 @@ class _AttractionsState extends State<Attractions> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
                 },
                 child: cardOne('Visit the Zoo, Rose Garden, Hoyt Arboretum, Pittock Mansion, and Japanese Garden at WashingtonPark.'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonState()));
+                },
+                child: cardOne('Sight-See in Washington State.'),
               ),
             ],
           ),

@@ -430,3 +430,53 @@ Card tillamookAirMuseum() {
     'tillamook-air-museum-map'
   );
 }
+
+Card olympicNationalPark() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Olympic_National_Park',
+    'olympic-national-park',
+    'Visit Olympic National Park.',
+    'https://www.google.com/maps/@47.6751176,-123.6015532,10z',
+    'olympic-national-park-map'
+  );
+}
+
+Card mountRanierNationalPark() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Mount_Rainier_National_Park',
+    'mount-ranier-national-park',
+    'Visit Mt Ranier National Park.',
+    'https://www.google.com/maps/@46.9068896,-121.7539242,10z',
+    'mount-ranier-national-park-map'
+  );
+}
+
+Card hanfordReachNationalMonument() {
+  return convenienceCardOne(
+    'https://www.youtube.com/watch?v=0iyM04F4exs',
+    'hanford-reach-national-monument',
+    'Hike the White Bluffs above Hanford Reach.',
+    'https://www.google.com/maps/@46.6780725,-119.4390818,15z',
+    'hanford-reach-national-monument-map'
+  );
+}
+
+Card channeledScablands() {
+  return convenienceCardOne(
+    'http://hugefloods.com/Scablands.html',
+    'channeled-scablands',
+    'Visit the Channeled Scablands',
+    'https://www.google.com/maps/@46.975,-119.196389,17z',
+    'channeled-scablands-map'
+  );
+}
+
+Card grandCouleeDam() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Grand_Coulee_Dam',
+    'grand-coulee-dam',
+    'Visit the Grand Coulee Dam',
+    'https://www.google.com/maps/@47.955833,-118.981667,14z',
+    'grand-coulee-dam-map'
+  );
+}
