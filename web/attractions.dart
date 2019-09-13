@@ -6,6 +6,7 @@ import 'mounthood.dart';
 import 'columbiagorge.dart';
 import 'oregoncoast.dart';
 import 'washingtonstate.dart';
+import 'centraloregon.dart';
 import 'eastwillamettevalleysights.dart';
 import 'westwillamettevalleysights.dart';
 
@@ -72,6 +73,12 @@ class _AttractionsState extends State<Attractions> {
                   await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonState()));
                 },
                 child: cardOne('Sight-See in Washington State.'),
+              ),
+              InkWell(
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (context) => CentralOregon()));
+                },
+                child: cardOne('Sight-See in Central and Eastern Oregon.'),
               ),
             ],
           ),

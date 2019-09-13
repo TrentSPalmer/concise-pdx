@@ -480,3 +480,123 @@ Card grandCouleeDam() {
     'grand-coulee-dam-map'
   );
 }
+
+Card lavaButte() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Lava_Butte',
+    'lava-butte',
+    'Visit Lava Butte',
+    'https://www.google.com/maps/@43.917857,-121.356033,15z',
+    'lava-butte-map'
+  );
+}
+
+Card newberryCrater() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Newberry_Volcano',
+    'newberry-crater',
+    'Visit Newberry National Volcanic Monument',
+    'https://www.google.com/maps/@43.689448,-121.2549263,14z',
+    'newberry-crater-map'
+  );
+}
+
+Card craterLake() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Crater_Lake_National_Park',
+    'crater-lake',
+    'Visit Crater Lake National park',
+    'https://www.google.com/maps/@42.9476883,-122.1017336,12z',
+    'crater-lake-map'
+  );
+}
+
+Card fortRock() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Fort_Rock',
+    'fort-rock',
+    'Visit Fort Rock',
+    'https://www.google.com/maps/@43.3736289,-121.070981,17z',
+    'fort-rock-map'
+  );
+}
+
+Card hartMountain() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Hart_Mountain_National_Antelope_Refuge',
+    'hart-mountain',
+    'Visit Hart Mountain National Antelope Refuge',
+    'https://www.google.com/maps/@42.5126488,-119.6368376,11z',
+    'hart-mountain-map'
+  );
+}
+
+Card malheurLake() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Malheur_National_Wildlife_Refuge',
+    'malheur-lake',
+    'Visit Malheur National Wildlife Refuge',
+    'https://www.google.com/maps/@43.265833,-118.844167,12z',
+    'malheur-lake-map'
+  );
+}
+
+Card steensMountain() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Steens_Mountain',
+    'steens-mountain',
+    'Visit Steens Mountain',
+    'https://www.google.com/maps/@42.636418,-118.576717,10z',
+    'steens-mountain-map'
+  );
+}
+
+Card alvordDesert() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Alvord_Desert',
+    'alvord-desert',
+    'Visit the Alvord Dry Lake Bed',
+    'https://www.google.com/maps/@42.53,-118.46,13z',
+    'alvord-desert-map'
+  );
+}
+
+Card owyheeCanyonLands() {
+  return convenienceCardOne(
+    'https://wildowyhee.org',
+    'owyhee-canyonlands',
+    'Visit Owyhee CanyonLands',
+    'https://www.google.com/maps/@43.111822,-117.41599,15z',
+    'owyhee-canyonlands-map'
+  );
+}
+
+Card wallowaLake() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Wallowa_Lake',
+    'wallowa-lake',
+    'Visit Wallowa Lake',
+    'https://www.google.com/maps/@45.308889,-117.210556,14z',
+    'wallowa-lake-map'
+  );
+}
+
+Card hellsCanyon() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/Hells_Canyon',
+    'hells-canyon',
+    'Visit Hells Canyon',
+    'https://www.google.com/maps/@45.3703961,-116.638333,18z',
+    'hells-canyon-map'
+  );
+}
+
+Card johnDayFossilBeds() {
+  return convenienceCardOne(
+    'https://en.wikipedia.org/wiki/John_Day_Fossil_Beds_National_Monument',
+    'john-day-fossil-beds',
+    'Visit John Day Fossil Beds National Monument',
+    'https://www.google.com/maps/@44.555833,-119.645278,13z',
+    'john-day-fossil-beds-map'
+  );
+}
