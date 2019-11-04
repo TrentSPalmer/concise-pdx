@@ -1,8 +1,10 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'gorgecamping.dart';
 import 'prebuildcards.dart';
 import 'card_templates.dart';
+import 'attractions.dart';
 
 class ColumbiaGorge extends StatefulWidget {
   @override
@@ -10,20 +12,29 @@ class ColumbiaGorge extends StatefulWidget {
 }
 
 class _ColumbiaGorgeState extends State<ColumbiaGorge> {
+  void initState() {
+    html.window.history.pushState("","columbia-gorge","/columbia-gorge.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
+              },
+            );
+          }
+        ), 
         title: Text('ColumbiaGorge'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,
@@ -46,8 +57,8 @@ class _ColumbiaGorgeState extends State<ColumbiaGorge> {
               infoCard('Wind Surf in the Columbia River Gorge.','https://www.travelportland.com/article/windsurfing-columbia-river-gorge/','b'),
               infoCard('Stern-Wheeler Cruises in the Columbia River Gorge.','https://en.wikipedia.org/wiki/Tourist_sternwheelers_of_Oregon','c'),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => GorgeCamping()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GorgeCamping()));
                 },
                 child: cardOne('Camping in the Columbia River Gorge.'),
               ),

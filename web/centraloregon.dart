@@ -1,6 +1,9 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
+import 'attractions.dart';
 
 class CentralOregon extends StatefulWidget {
   @override
@@ -8,21 +11,29 @@ class CentralOregon extends StatefulWidget {
 }
 
 class _CentralOregonState extends State<CentralOregon> {
-
+  void initState() {
+    html.window.history.pushState("","central-oregon","/central-oregon.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
+              },
+            );
+          }
+        ), 
         title: Text('central-eastern-oregon'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,
@@ -43,14 +54,6 @@ class _CentralOregonState extends State<CentralOregon> {
               wallowaLake(),
               hellsCanyon(),
               johnDayFossilBeds(),
-              /*
-              InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonHiking()));
-                },
-                child: cardOne('Hiking in Washington State.'),
-              ),
-              */
             ],
           ),
         ),

@@ -2,6 +2,8 @@ import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
 import 'card_templates.dart';
+import 'dart:html' as html;
+import 'vistas.dart';
 
 class OregonCityVistas extends StatefulWidget {
   @override
@@ -9,20 +11,29 @@ class OregonCityVistas extends StatefulWidget {
 }
 
 class _OregonCityVistasState extends State<OregonCityVistas> {
+  void initState() {
+    html.window.history.pushState("","oregon-city-vistas","/oregon-city-vistas.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Vistas()));
+              },
+            );
+          }
+        ), 
         title: Text('oregon-city-vistas'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

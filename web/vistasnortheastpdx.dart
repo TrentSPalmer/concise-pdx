@@ -1,6 +1,9 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
+import 'dart:html' as html;
+import 'vistas.dart';
 
 class VistasNorthEastPDX extends StatefulWidget {
   @override
@@ -8,20 +11,29 @@ class VistasNorthEastPDX extends StatefulWidget {
 }
 
 class _VistasNorthEastPDXState extends State<VistasNorthEastPDX> {
+  void initState() {
+    html.window.history.pushState("","vistas-ne-pdx","/vistas-ne-pdx.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Vistas()));
+              },
+            );
+          }
+        ), 
         title: Text('ne-pdx-vistas'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

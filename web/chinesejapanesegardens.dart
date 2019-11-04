@@ -2,6 +2,8 @@ import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'card_templates.dart';
 import 'prebuildcards.dart';
+import 'dart:html' as html;
+import 'faqs.dart';
 
 class ChineseJapaneseGardens extends StatefulWidget {
   @override
@@ -9,6 +11,10 @@ class ChineseJapaneseGardens extends StatefulWidget {
 }
 
 class _ChineseJapaneseGardensState extends State<ChineseJapaneseGardens> {
+  void initState() {
+    html.window.history.pushState("","chinese-japanese-gardens","/chinese-japanese-gardens.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -18,16 +24,21 @@ class _ChineseJapaneseGardensState extends State<ChineseJapaneseGardens> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Faqs()));
+              },
+            );
+          }
+        ), 
         title: Text('chinese-japanese-gardens'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

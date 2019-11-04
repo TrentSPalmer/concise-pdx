@@ -3,6 +3,8 @@ import 'defaults.dart';
 import 'trimet.dart';
 import 'chinesejapanesegardens.dart';
 import 'card_templates.dart';
+import 'concisepdx.dart';
+import 'dart:html' as html;
 
 class Faqs extends StatefulWidget {
   @override
@@ -10,10 +12,24 @@ class Faqs extends StatefulWidget {
 }
 
 class _FaqsState extends State<Faqs> {
+  void initState() {
+    html.window.history.pushState("","faqs","/faqs.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ConcisePDX()));
+              },
+            );
+          }
+        ), 
         title: Text(
             'faqs',
           ),
@@ -27,14 +43,14 @@ class _FaqsState extends State<Faqs> {
           child: Column(
             children: <Widget>[
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => TriMet()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => TriMet()));
                 },
                 child: cardOne('How do the buses, lightrail, and streetcars work?'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => ChineseJapaneseGardens()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ChineseJapaneseGardens()));
                 },
                 child: cardOne('What is the difference between Chinese Gardens and Japanese Gardens?'),
               ),

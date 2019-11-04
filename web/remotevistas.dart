@@ -1,6 +1,9 @@
 import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
+import 'dart:html' as html;
+import 'vistas.dart';
 
 class RemoteVistas extends StatefulWidget {
   @override
@@ -8,20 +11,29 @@ class RemoteVistas extends StatefulWidget {
 }
 
 class _RemoteVistasState extends State<RemoteVistas> {
+  void initState() {
+    html.window.history.pushState("","remote-vistas","/remote-vistas.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Vistas()));
+              },
+            );
+          }
+        ), 
         title: Text('remote-vistas'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

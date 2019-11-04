@@ -4,13 +4,15 @@ import 'card_templates.dart';
 import 'vistadrives.dart';
 import 'vistawalks.dart';
 import 'vistahikes.dart';
+import 'gorgevistas.dart';
+import 'remotevistas.dart';
 import 'vistasnorthpdx.dart';
 import 'vistasnortheastpdx.dart';
 import 'vistassoutheastpdx.dart';
 import 'greshamvistas.dart';
 import 'oregoncityvistas.dart';
-import 'remotevistas.dart';
-import 'gorgevistas.dart';
+import 'concisepdx.dart';
+import 'dart:html' as html;
 
 class Vistas extends StatefulWidget {
   @override
@@ -18,12 +20,26 @@ class Vistas extends StatefulWidget {
 }
 
 class _VistasState extends State<Vistas> {
+  void initState() {
+    html.window.history.pushState("","vistas-and-overlooks","/vistas-and-overlooks.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ConcisePDX()));
+              },
+            );
+          }
+        ), 
         title: Text(
-            'walkable-street-areas\nwith bars-restaurants',
+            'vistas-and-overlooks',
           ),
         centerTitle: true,
         backgroundColor: navy,
@@ -35,62 +51,62 @@ class _VistasState extends State<Vistas> {
           child: Column(
             children: <Widget>[
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => VistaDrives()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => VistaDrives()));
                 },
                 child: cardOne('Drive to the Top'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => VistaWalks()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => VistaWalks()));
                 },
                 child: cardOne('Walk to the Top'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => VistaHikes()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => VistaHikes()));
                 },
                 child: cardOne('A Real Hike to the Top'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => GorgeVistas()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GorgeVistas()));
                 },
                 child: cardOne('Gorge'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => RemoteVistas()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => RemoteVistas()));
                 },
                 child: cardOne('Remote'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => VistasNorthPDX()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => VistasNorthPDX()));
                 },
                 child: cardOne('North Portland'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => VistasNorthEastPDX()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => VistasNorthEastPDX()));
                 },
                 child: cardOne('NE Portland'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => VistasSouthEastPDX()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => VistasSouthEastPDX()));
                 },
                 child: cardOne('SE Portland'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => GreshamVistas()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => GreshamVistas()));
                 },
                 child: cardOne('Gresham'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => OregonCityVistas()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OregonCityVistas()));
                 },
                 child: cardOne('Oregon City'),
               ),

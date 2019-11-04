@@ -1,7 +1,9 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'card_templates.dart';
 import 'prebuildcards.dart';
+import 'attractions.dart';
 
 class OregonCoast extends StatefulWidget {
   @override
@@ -11,20 +13,29 @@ class OregonCoast extends StatefulWidget {
 class _OregonCoastState extends State<OregonCoast> {
   String _coastString = 'These is not a single State Park Campground on the Oregon Coast that is not Amazing!';
 
+  void initState() {
+    html.window.history.pushState("","oregon-coast","/oregon-coast.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
+              },
+            );
+          }
+        ), 
         title: Text('OregonCoast'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

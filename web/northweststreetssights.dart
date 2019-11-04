@@ -1,8 +1,10 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'card_templates.dart';
 import 'prebuildcards.dart';
 import 'washingtonpark.dart';
+import 'northweststreets.dart';
 
 class NorthWestStreetsSights extends StatefulWidget {
   @override
@@ -10,20 +12,29 @@ class NorthWestStreetsSights extends StatefulWidget {
 }
 
 class _NorthWestStreetsSightsState extends State<NorthWestStreetsSights> {
+  void initState() {
+    html.window.history.pushState("","northwest-streets-sights","/northwest-streets-sights.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NorthWestStreets()));
+              },
+            );
+          }
+        ), 
         title: Text('northwest-pdx-sights'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,
@@ -41,8 +52,8 @@ class _NorthWestStreetsSightsState extends State<NorthWestStreetsSights> {
                 'providence-park-map'
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
                 },
                 child: cardOne('Visit the Zoo, Rose Garden, Hoyt Arboretum, Pittock Mansion, and Japanese Garden at WashingtonPark.'),
               ),

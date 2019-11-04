@@ -1,6 +1,10 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'prebuildcards.dart';
+import 'card_templates.dart';
+import 'northweststreetssights.dart';
+import 'attractions.dart';
 
 class WashingtonPark extends StatefulWidget {
   @override
@@ -8,6 +12,10 @@ class WashingtonPark extends StatefulWidget {
 }
 
 class _WashingtonParkState extends State<WashingtonPark> {
+  void initState() {
+    html.window.history.pushState("","washington-park","/washington-park.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,12 +24,7 @@ class _WashingtonParkState extends State<WashingtonPark> {
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,
@@ -35,6 +38,18 @@ class _WashingtonParkState extends State<WashingtonPark> {
               roseGarden(),
               hoytArboretum(),
               pittockMansion(),
+              InkWell(
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NorthWestStreetsSights()));
+                },
+                child: cardOne('(Back to as long as you are in NW Portland)'),
+              ),
+              InkWell(
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
+                },
+                child: cardOne('(Back to must see and do'),
+              ),
             ],
           ),
         ),

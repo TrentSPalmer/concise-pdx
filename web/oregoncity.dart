@@ -1,7 +1,9 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'card_templates.dart';
 import 'oregoncitysights.dart';
+import 'eastwillamettevalley.dart';
 
 class OregonCity extends StatefulWidget {
   @override
@@ -9,20 +11,29 @@ class OregonCity extends StatefulWidget {
 }
 
 class _OregonCityState extends State<OregonCity> {
+  void initState() {
+    html.window.history.pushState("","oregon-city","/oregon-city.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('walkable small-towns\nwith bars-restaurants'),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => EastWillametteValley()));
+              },
+            );
+          }
+        ), 
+        title: Text('walkable streets in Oregon City'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

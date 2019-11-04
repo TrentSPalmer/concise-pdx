@@ -1,4 +1,5 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'card_templates.dart';
 import 'washingtonpark.dart';
@@ -9,6 +10,7 @@ import 'washingtonstate.dart';
 import 'centraloregon.dart';
 import 'eastwillamettevalleysights.dart';
 import 'westwillamettevalleysights.dart';
+import 'concisepdx.dart';
 
 class Attractions extends StatefulWidget {
   @override
@@ -16,10 +18,24 @@ class Attractions extends StatefulWidget {
 }
 
 class _AttractionsState extends State<Attractions> {
+  void initState() {
+    html.window.history.pushState("","must-see-and-do","/must-see-and-do.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ConcisePDX()));
+              },
+            );
+          }
+        ), 
         title: Text(
             'attractions',
           ),
@@ -33,50 +49,50 @@ class _AttractionsState extends State<Attractions> {
           child: Column(
             children: <Widget>[
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WestWillametteValleySights()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WestWillametteValleySights()));
                 },
                 child: cardOne('Sight-See in the West Willamette Valley.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => EastWillametteValleySights()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => EastWillametteValleySights()));
                 },
                 child: cardOne('Sight-See in the East Willamette Valley.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => MountHood()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MountHood()));
                 },
                 child: cardOne('Camp, Hike, or Sight-See on Mt Hood.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => OregonCoast()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => OregonCoast()));
                 },
                 child: cardOne('Camp, Hike, or Sight-See on the Oregon Coast.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => ColumbiaGorge()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ColumbiaGorge()));
                 },
                 child: cardOne('Camp, Hike, Cruise, or Sight-See in the Columbia River Gorge.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WashingtonPark()));
                 },
                 child: cardOne('Visit the Zoo, Rose Garden, Hoyt Arboretum, Pittock Mansion, and Japanese Garden at WashingtonPark.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => WashingtonState()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => WashingtonState()));
                 },
                 child: cardOne('Sight-See in Washington State.'),
               ),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => CentralOregon()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CentralOregon()));
                 },
                 child: cardOne('Sight-See in Central and Eastern Oregon.'),
               ),

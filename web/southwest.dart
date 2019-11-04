@@ -1,6 +1,8 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'card_templates.dart';
+import 'streetareas.dart';
 
 class SouthWestStreets extends StatefulWidget {
   @override
@@ -8,20 +10,29 @@ class SouthWestStreets extends StatefulWidget {
 }
 
 class _SouthWestStreetsState extends State<SouthWestStreets> {
+  void initState() {
+    html.window.history.pushState("","southwest-streets","/southwest-streets.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => StreetAreas()));
+              },
+            );
+          }
+        ), 
         title: Text('walkable sw streets\nwith bars-restaurants'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

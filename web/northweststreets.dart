@@ -1,7 +1,9 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'card_templates.dart';
 import 'northweststreetssights.dart';
+import 'streetareas.dart';
 
 class NorthWestStreets extends StatefulWidget {
   @override
@@ -9,20 +11,29 @@ class NorthWestStreets extends StatefulWidget {
 }
 
 class _NorthWestStreetsState extends State<NorthWestStreets> {
+  void initState() {
+    html.window.history.pushState("","northwest-streets","/northwest-streets.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => StreetAreas()));
+              },
+            );
+          }
+        ), 
         title: Text('walkable northwest streets\nwith bars-restaurants'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,
@@ -34,8 +45,8 @@ class _NorthWestStreetsState extends State<NorthWestStreets> {
               cardTwo('NW 23rd from Burnside to Thurman','https://www.google.com/maps/@45.5295226,-122.6984339,16z','23rd'),
               cardTwo('NW 21st from Burnside to Raleigh','https://www.google.com/maps/@45.5291143,-122.6945136,16z','21st'),
               InkWell(
-                onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (context) => NorthWestStreetsSights()));
+                onTap: (){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NorthWestStreetsSights()));
                 },
                 child: cardOne('As long as you\'re in NorthWest Portland.'),
               ),

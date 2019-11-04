@@ -1,7 +1,9 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'prebuildcards.dart';
 import 'card_templates.dart';
+import 'attractions.dart';
 
 class EastWillametteValleySights extends StatefulWidget {
   @override
@@ -9,20 +11,29 @@ class EastWillametteValleySights extends StatefulWidget {
 }
 
 class _EastWillametteValleySightsState extends State<EastWillametteValleySights> {
+  void initState() {
+    html.window.history.pushState("","east-willamette-valley-sights","/east-willamette-valley-sights.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
+              },
+            );
+          }
+        ), 
         title: Text('east willamette valley sights'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

@@ -1,7 +1,9 @@
 import 'package:flutter_web/material.dart';
+import 'dart:html' as html;
 import 'defaults.dart';
 import 'prebuildcards.dart';
 import 'card_templates.dart';
+import 'attractions.dart';
 
 class WestWillametteValleySights extends StatefulWidget {
   @override
@@ -9,6 +11,10 @@ class WestWillametteValleySights extends StatefulWidget {
 }
 
 class _WestWillametteValleySightsState extends State<WestWillametteValleySights> {
+  void initState() {
+    html.window.history.pushState("","west-willamette-valley-sights","/west-willamette-valley-sights.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     String _wineTastingString = 'Newberg-Dundee is Oregon\'s biggest wine tasting region.';
@@ -16,16 +22,21 @@ class _WestWillametteValleySightsState extends State<WestWillametteValleySights>
     _wineTastingString += ' of drunk jerks in Newberg at 1 or 2 am.';
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
+              },
+            );
+          }
+        ), 
         title: Text('west willamette valley sights'),
         centerTitle: true,
         backgroundColor: navy,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {
-              Navigator.of(context).popUntil((route) => route.isFirst);
-            },
-          ),
+          Home(context),
         ],
       ),
       backgroundColor: peacockBlue,

@@ -2,6 +2,8 @@ import 'package:flutter_web/material.dart';
 import 'defaults.dart';
 import 'prebuildcards.dart';
 import 'card_templates.dart';
+import 'concisepdx.dart';
+import 'dart:html' as html;
 
 class Hikes extends StatefulWidget {
   @override
@@ -9,6 +11,10 @@ class Hikes extends StatefulWidget {
 }
 
 class _HikesState extends State<Hikes> {
+  void initState() {
+    html.window.history.pushState("","must-hikes","/must-hikes.html");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -20,6 +26,16 @@ class _HikesState extends State<Hikes> {
 
     return Scaffold(
       appBar: AppBar(
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ConcisePDX()));
+              },
+            );
+          }
+        ), 
         title: Text(
             'hikes',
           ),
