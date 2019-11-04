@@ -48,7 +48,7 @@ class _WashingtonParkState extends State<WashingtonPark> {
                 onTap: (){
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Attractions()));
                 },
-                child: cardOne('(Back to must see and do'),
+                child: cardOne('(Back to must see and do)'),
               ),
             ],
           ),
